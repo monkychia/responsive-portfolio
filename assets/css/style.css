@@ -133,7 +133,7 @@ input {
 {
     width: 700px;
     height: 150px;
-    margin-top: 15px;
+    margin-top: auto;
     display: inline-block;
     margin-left: 10px;
     vertical-align: top;
@@ -156,6 +156,7 @@ input {
     width: 46%;
     height: 150px;
     background-color: #666666;
+    border: 1px solid #666666;
 }
 
 .banner1
@@ -221,87 +222,166 @@ footer
 }
 
 /* Responsive layout - when the screen is less than 992px wide (tablet size), make the name and the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 992px) {
-    .header-box, .header-right {
-        clear: both;
-        float: left;
-    }
-
-    ul {
-        padding-left: 0px;
-    }
-
-    /* Responsive lagyout - when the screen is less than 992px wide, in /index page, make the image disappear and aside paragraph displays on top of the page*/
+@media screen and (max-width: 980px) {
     .image {
-        display: none;
+        float: left;
+        margin-right: 10px;
     }
 
     .side {
-        width: 100%;
-        height: 100%;
+        display: inline;
+        height: auto;
+    }
+
+    .side-text {
+        margin-top: -15px;
+    }
+
+    .content {
+        width: 60%;
         margin-left: 0px;
     }
 
     section.bottom {
-        margin-top: 10px;
+        margin-top: -35px;
     }
-
-    /* Responsive lagyout - when the screen is less than 992px wide, in /portfolio page, make the banners shorter and aligned with the images. */   
 
     .banner1
     {
-        top: 329px;
-        width: 21.5%;
+        top: 267px;
+        width: 13.5%;
     }
 
     .banner2 {
-        top: 486px;
-        width: 21.5%;
+        top: 424px;
+        width: 13.5%;
     }
 
     .banner3 {
-        width: 21.5%;
-        top: 652px;
+        width: 13.5%;
+        top: 63%;
+    }
+
+    .banner-label {
+        font-size: 12px;
     }
 
 }
 
+@media screen and (max-width: 768px) {
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 94%;
+    }
+
+    .image {
+        float: left;
+        margin-right: 10px;
+    }
+    
+    .side {
+        offset-block-end: 10%;
+    }
+    
+    section.bottom {
+        margin-top: -35px;
+    }
+
+    .banner1
+    {
+        width: 21%;
+    }
+
+    .banner2 {
+        width: 21%;
+    }
+
+    .banner3 {
+        width: 21%;
+    }
+}
+
 /* Responsive layout - when the screen is less than 600px wide (mobile size), make the name and the navigation links stack on top of each other instead of next to each other and change the title text color. */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .nav {
         color: #8A0707;
     }
 
     .header-box {
         background: #8A0707;
+        display: block;
+        width: 100%;
+    }
+
+    .header-right {
+        width: 100%;
+        margin-top: 0px;
     }
 
     .row {
+        display: flex;
         flex-direction: column;
     }
 
-    /* Responsive lagyout - when the screen is less than 992px wide, in /portfolio page, make the banners to align in one column and display on top of the images. */
+    ul {
+        margin-left: 23%;
+    }
+
+    .image {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .side {
+        float: none;
+        display: block;
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .side-text {
+        margin-top: 0px;
+    }
+
+    section.bottom {
+        margin-top: 0px;
+    }
+    .copyright {
+        width: 30%;
+        left: 40%;
+    }
+
     .banner1
     {
-        top: 329px;
-        width: 41.3%;
+        top: 466px;
+        width: 91%;
     }
 
     .banner2 {
-        top: 642px;
-        width: 41.3%;
+        top: 1116px;
+        width: 91%;
     }
 
     .banner3 {
-        width: 41.3%;
-        top: 104%;
+        width: 91%;
+        top: 191%;
     }
     
     .banner1-1 {
-        top: 487px;
+        top: 788px;
+        width: 91%;
     }
 
     .banner2-1 {
-        top: 800px;
+        top: 1441px;
+        width: 91%
+    }
+
+    .square {
+        width: 100%;
+        height: 315px;
     }
 }
