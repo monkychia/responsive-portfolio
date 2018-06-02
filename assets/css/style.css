@@ -101,6 +101,7 @@ li:last-child {
 {
     margin-top: 3px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 input {
